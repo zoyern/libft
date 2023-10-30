@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 23:46:12 by almounib          #+#    #+#             */
-/*   Updated: 2023/10/31 00:15:33 by almounib         ###   ########.fr       */
+/*   Created: 2023/10/30 23:55:33 by almounib          #+#    #+#             */
+/*   Updated: 2023/10/31 00:18:49 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+void	*ft_memset(void *s, int c, unsigned int n)
 {
-	unsigned int	len;
+	unsigned char	*str;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	str = (unsigned char)s;
+	while (n)
+	{
+		*str++ = (unsigned char)c;
+		n--;
+	}
+	return (s);
 }
