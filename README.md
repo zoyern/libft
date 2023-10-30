@@ -1,4 +1,4 @@
-# <img src="https://github.com/favicon.ico" width="24"> Libft for 42 School
+# <img src="https://github.com/favicon.ico" width="50"> Libft for 42 School
 
 ```plaintext
   _____                                                  _____ 
@@ -28,10 +28,8 @@ Ce README est dédié au projet Libft pour l'école 42. La bibliothèque Libft c
 
 ## Table des matières
 
-- [À propos](#about)
-- [Utilisation](#usage)
-- [Contributions](#contributing)
-- [Licence](#license)
+- [À propos](#à-propos)
+- [Utilisation](#utilisation)
 
 ## À propos
 
