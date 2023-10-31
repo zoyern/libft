@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 17:12:00 by zoyern            #+#    #+#             */
-/*   Updated: 2023/10/31 18:06:48 by zoyern           ###   ########.fr       */
+/*   Created: 2023/10/31 17:52:21 by zoyern            #+#    #+#             */
+/*   Updated: 2023/10/31 18:08:00 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include "libft.h"
+
+char	*ft_strnstr(const char *s,	const char *needle, unsigned int n)
 {
-	unsigned int	i;
+	unsigned int	needle_len;
 	
-	i = 0;
-	if (n == 0)
-		return (0);
-	while(*s1++ && *s2++ && i++ < n - 1)
+	needle_len = ft_strlen(needle);
+	if (!*needle)
+		return ((char *)s);
+	while (*s++ && n-- >= needle_len)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
+		if(ft_strncmp(s, needle, needle_len) == 0)
+			return ((char *)s);
 	}
-	return (*s1 - *s2);
+	return (NULL);
 }
