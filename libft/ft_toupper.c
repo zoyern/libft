@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 23:46:12 by almounib          #+#    #+#             */
-/*   Updated: 2023/10/31 16:15:50 by zoyern           ###   ########.fr       */
+/*   Created: 2023/10/31 14:39:49 by zoyern            #+#    #+#             */
+/*   Updated: 2023/10/31 16:19:30 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *s)
+int	ft_toupper(int c)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

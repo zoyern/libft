@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 23:46:12 by almounib          #+#    #+#             */
-/*   Updated: 2023/10/31 16:15:50 by zoyern           ###   ########.fr       */
+/*   Created: 2023/10/31 16:25:58 by zoyern            #+#    #+#             */
+/*   Updated: 2023/10/31 17:05:05 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *s)
-{
-	unsigned int	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+char	*ft_strchr(const char *s, int c)
+{
+	while(*s++)
+	{
+		if (*s == c)
+			return ((char *)s);
+		if (*s == '\0')
+			return (NULL);
+	}
 }

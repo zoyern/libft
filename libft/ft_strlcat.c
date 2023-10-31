@@ -3,32 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 01:42:58 by almounib          #+#    #+#             */
-/*   Updated: 2023/10/31 01:47:28 by almounib         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:24:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strulen(char *str)
-{
-	unsigned int	len;
+#include "libft.h"
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
-
-unsigned int	ft_strlcat(char *dst, const char *restrict src, unsigned int sz)
+unsigned int	ft_strlcat(char *dst, const char *src, unsigned int sz)
 {
 	unsigned int	dest_len;
 	unsigned int	src_len;
 	unsigned int	i;
 	unsigned int	j;
 
-	dest_len = ft_strulen(dst);
-	src_len = ft_strulen(src);
+	dest_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	i = 0;
 	j = 0;
 	if (sz < 1)
