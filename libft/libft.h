@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:14:55 by zoyern            #+#    #+#             */
-/*   Updated: 2023/10/31 18:07:03 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/10/31 18:18:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n);
 void	*ft_memchr(const void *s, int c, unsigned int n);
 int	ft_memcmp(const void *s1, const void *s2, unsigned int n);
 char	*ft_strnstr(const char *s,	const char *needle, unsigned int n);
+
+int	ft_atoi(const char *nptr);
 
 #endif
