@@ -6,21 +6,20 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:12:00 by zoyern            #+#    #+#             */
-/*   Updated: 2023/10/31 18:06:48 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 18:41:14 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	unsigned int	i;
-	
-	i = 0;
-	if (n == 0)
+	if (!n)
 		return (0);
-	while(*s1++ && *s2++ && i++ < n - 1)
+	while (*s1 && *s2 && (n-- - 1))
 	{
 		if (*s1 != *s2)
-			return (*s1 - *s2);
+			return (((unsigned char)*s1) - ((unsigned char)*s2));
+		s1++;
+		s2++;
 	}
-	return (*s1 - *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

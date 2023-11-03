@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:24:33 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/02 10:02:19 by zoyern           ###   ########.fr       */
+/*   Created: 2023/11/02 06:01:12 by zoyern            #+#    #+#             */
+/*   Updated: 2023/11/02 09:56:18 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	unsigned int	len;
+	char			*t;
+
+	len = ft_strlen(s);
+	t = (char *)malloc(sizeof(char *) * (len + 1));
+	if (!t)
+		return (NULL);
+	while (len--)
+		*t++ = *s++;
+	*t = '\0';
+	return (t);
 }

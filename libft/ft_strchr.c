@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:25:58 by zoyern            #+#    #+#             */
-/*   Updated: 2023/10/31 17:05:05 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/02 09:54:16 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while(*s++)
+	while (*s++)
 	{
 		if (*s == c)
 			return ((char *)s);
-		if (*s == '\0')
-			return (NULL);
 	}
+	return (NULL);
 }
