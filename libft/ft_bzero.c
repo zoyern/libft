@@ -6,11 +6,11 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 00:19:46 by almounib          #+#    #+#             */
-/*   Updated: 2023/11/02 10:31:12 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, unsigned int n)
+void	ft_bzero(void *s, unsigned long n)
 {
 	unsigned char	*t;
 

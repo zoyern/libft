@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 06:48:17 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/02 10:01:06 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int	start;
-	unsigned int	end;
-	unsigned int	len;
+	unsigned long	start;
+	unsigned long	end;
+	unsigned long	len;
 	char			*t;
 
 	if (!s1 || !set)

@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 06:01:12 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/02 09:56:18 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	unsigned int	len;
+	unsigned long	len;
 	char			*t;
 
 	len = ft_strlen(s);
-	t = (char *)malloc(sizeof(char *) * (len + 1));
+	t = (char *)malloc(sizeof(char) * (len + 1));
 	if (!t)
 		return (NULL);
-	while (len--)
+	while (*s)
 		*t++ = *s++;
 	*t = '\0';
-	return (t);
+	return (t -= len);
 }

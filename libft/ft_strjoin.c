@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 06:36:46 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/02 09:57:30 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	s1_len;
-	unsigned int	s2_len;
+	unsigned long	s1_len;
+	unsigned long	s2_len;
 	char			*t;
 
 	s1_len = ft_strlen(s1);

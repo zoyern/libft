@@ -6,15 +6,15 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 01:00:16 by almounib          #+#    #+#             */
-/*   Updated: 2023/10/31 16:24:07 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int sz)
+unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long sz)
 {
-	unsigned int	i;
+	unsigned long	i;
 
 	i = 0;
 	if (!sz)

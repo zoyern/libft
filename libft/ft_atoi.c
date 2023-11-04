@@ -6,13 +6,13 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:08:47 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/02 10:11:31 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned int	i;
+	unsigned long	i;
 	int				sign;
 	int				num;
 

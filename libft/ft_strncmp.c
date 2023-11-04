@@ -6,11 +6,11 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:12:00 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/03 18:41:14 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned long n)
 {
 	if (!n)
 		return (0);

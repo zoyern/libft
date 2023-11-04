@@ -6,13 +6,13 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:46:12 by almounib          #+#    #+#             */
-/*   Updated: 2023/10/31 16:15:50 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *s)
+unsigned long	ft_strlen(const char *s)
 {
-	unsigned int	i;
+	unsigned long	i;
 
 	i = 0;
 	while (s[i])

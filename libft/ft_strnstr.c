@@ -6,15 +6,15 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:52:21 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/02 10:00:02 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s,	const char *needle, unsigned int n)
+char	*ft_strnstr(const char *s,	const char *needle, unsigned long n)
 {
-	unsigned int	needle_len;
+	unsigned long	needle_len;
 
 	needle_len = ft_strlen(needle);
 	if (!*needle)
