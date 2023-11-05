@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 06:36:46 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/05 16:46:42 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned long	s1_len;
-	unsigned long	s2_len;
+	unsigned long	len;
 	char			*t;
 
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	t = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	len = ft_strlen(s1) + ft_strlen(s2);
+	t = (char *)malloc(sizeof(char) * (len + 1));
 	if (!t)
 		return (NULL);
-	while (s1_len--)
+	while (*s1)
 		*t++ = *s1++;
-	while (s2_len--)
+	while (*s2)
 		*t++ = *s2++;
 	*t = '\0';
-	return (t);
+	return (t -= len);
 }

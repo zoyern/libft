@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:14:55 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/04 00:17:39 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/05 16:49:13 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <string.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
@@ -40,14 +46,16 @@ char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, unsigned long n);
 void			*ft_memchr(const void *s, int c, unsigned long n);
 int				ft_memcmp(const void *s1, const void *s2, unsigned long n);
-char			*ft_strnstr(const char *s,	const char *needle, unsigned long n);
+char			*ft_strnstr(const char *s,	const char *needle,
+					unsigned long n);
 
 int				ft_atoi(const char *nptr);
 
 void			*ft_calloc(unsigned long nmemb, unsigned long size);
 char			*ft_strdup(const char *s);
 
-char			*ft_substr(char const *s, unsigned long start, unsigned long len);
+char			*ft_substr(char const *s, unsigned long start,
+					unsigned long len);
 char			*ft_strjoin(char const *s1, char const *s2);
- 
+char			*ft_strtrim(char const *s1, char const *set);
 #endif 

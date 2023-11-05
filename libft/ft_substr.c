@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 06:14:45 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/03 23:14:08 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/05 16:42:39 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 char	*ft_substr(char const *s, unsigned long start, unsigned long len)
 {
-	char	*t;
+	char			*t;
+	unsigned long	i;
 
 	t = (char *)malloc(sizeof(char) * (len + 1));
 	if (!t)
 		return (NULL);
 	s += start;
-	while (len--)
+	i = 0;
+	while (*s && i++ < len)
 		*t++ = *s++;
 	*t = '\0';
-	return (t);
+	return (t -= i - 1);
 }
