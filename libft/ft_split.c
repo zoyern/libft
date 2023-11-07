@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:42:59 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/07 22:23:19 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/07 22:25:36 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ unsigned long	count_words(char const *s, char c)
 	return (count);
 }
 
-char	*malloc_str(char const *s, char c, int *pos)
+char	*malloc_str(char const *s, char c, unsigned long *pos)
 {
-	char	*dup;
-	int		len;
+	char				*dup;
+	unsigned long		len;
 
 	len = 0;
 	while (s[*pos] == c)
@@ -59,10 +59,10 @@ char	*malloc_str(char const *s, char c, int *pos)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	char	**strs;
-	int		count;
-	int		pos;
+	unsigned long		i;
+	char				**strs;
+	unsigned long		count;
+	unsigned long		pos;
 
 	if (!s)
 		return (NULL);
