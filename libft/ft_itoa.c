@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
+/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 22:26:56 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/08 00:52:43 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/08 16:58:15 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 unsigned long	ft_nbrlen(int n)
 {
@@ -24,7 +25,7 @@ unsigned long	ft_nbrlen(int n)
 		n *= -1;
 		count++;
 	}
-	while (n <= 0)
+	while (n != 0)
 	{
 		count++;
 		n /= 10;
