@@ -6,13 +6,11 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:45:22 by almounib          #+#    #+#             */
-/*   Updated: 2023/11/09 15:30:42 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/09 17:46:04 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar_fd(char c, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
