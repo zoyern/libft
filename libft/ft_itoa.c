@@ -6,7 +6,7 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 22:26:56 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/09 16:03:06 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/09 16:26:25 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ unsigned long	ft_nbrlen(int n)
 	unsigned long	count;
 
 	count = 0;
-	if (n < 0 || n == 0)
+	if (n <= 0)
 		count++;
 	while (n != 0)
 	{

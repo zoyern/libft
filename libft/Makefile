@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: almounib <almounib@student.42.fr>          +#+  +:+       +#+         #
+#    By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 10:06:38 by zoyern            #+#    #+#              #
-#    Updated: 2023/11/08 16:49:50 by almounib         ###   ########.fr        #
+#    Updated: 2023/11/09 17:40:02 by zoyern           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ FILES		= ft_isalpha.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c\
-			#ft_lstnew.c\
+			
+BONUSFILES	= ft_lstnew.c\
 			ft_lstadd_front.c\
 			ft_lstsize.c\
 			ft_lstlast.c\
@@ -53,10 +54,12 @@ FILES		= ft_isalpha.c\
 			ft_lstdelone.c\
 			ft_lstclear.c\
 			ft_lstiter.c\
-			ft_lstmap.c\#
+			ft_lstmap.c
 
 OBJECTS		= ${FILES:.c=.o}
-HEAD		= ./includes/
+BONUSOBJ	= ${BONUSFILES:.c=.o}
+
+HEAD		= ./
 AR			= ar rc
 RM			= rm -f
 LIB			= ranlib
@@ -72,12 +75,16 @@ ${NAME}:	${OBJECTS}
 			${AR} ${NAME} ${OBJECTS}
 			${LIB} ${NAME}
 
+bonus:		${BONUSOBJ}
+			${AR} ${NAME} ${OBJECTS}
+			${LIB} ${NAME}
+
 clean:
-			${RM} ${OBJECTS}
+			${RM} ${OBJECTS} ${BONUSOBJ}
 
 fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all bonus clean fclean re
