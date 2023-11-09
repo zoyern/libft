@@ -6,12 +6,11 @@
 /*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 01:00:16 by almounib          #+#    #+#             */
-/*   Updated: 2023/11/04 18:11:49 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/09 16:03:41 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long sz)
 {
