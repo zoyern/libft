@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 22:26:56 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/08 16:58:15 by almounib         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:02:43 by zoyern           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,12 @@ unsigned long	ft_nbrlen(int n)
 	unsigned long	count;
 
 	count = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-	{
-		n *= -1;
+	if (n < 0 || n == 0)
 		count++;
-	}
 	while (n != 0)
 	{
-		count++;
 		n /= 10;
+		count++;
 	}
 	return (count);
 }
@@ -36,25 +31,25 @@ unsigned long	ft_nbrlen(int n)
 char	*ft_itoa(int n)
 {
 	char			*s;
-	unsigned long	len;
+	unsigned long	count;
+	int				sign;
 	long int		nb;
-	unsigned long	i;
 
-	len = ft_nbrlen(n);
 	nb = n;
-	i = 0;
-	s = (char *)malloc(sizeof(char) * (len + 1));
+	count = ft_nbrlen(nb);
+	sign = 0;
+	s = (char *)malloc(sizeof(char) * count + 1);
 	if (!s)
 		return (NULL);
+	s[count] = '\0';
 	if (nb < 0)
 	{
-		s[i++] = '-';
 		nb *= -1;
+		s[sign++] = '-';
 	}
-	s[len + 1] = '\0';
-	while (len-- > i)
+	while (count-- > (unsigned long)sign)
 	{
-		s[len] = (nb % 10) + '0';
+		s[count] = (nb % 10) + '0';
 		nb /= 10;
 	}
 	return (s);
