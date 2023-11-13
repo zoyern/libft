@@ -6,7 +6,7 @@
 #    By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 10:06:38 by zoyern            #+#    #+#              #
-#    Updated: 2023/11/13 22:31:11 by zoyern           ###   ########.fr        #
+#    Updated: 2023/11/13 22:40:55 by zoyern           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ OBJECTS		= ${FILES:.c=.o}
 BONUSOBJ	= ${BONUSFILES:.c=.o}
 
 HEAD		= ./
-AR			= ar rc
+AR			= ar rcs
 RM			= rm -f
 LIB			= ranlib
 CC			= cc
@@ -76,7 +76,7 @@ ${NAME}:	${OBJECTS}
 			${LIB} ${NAME}
 
 bonus:		${BONUSOBJ}
-			${AR} ${NAME} ${OBJECTS}
+			${AR} ${NAME} ${OBJECTS} ${BONUSOBJ}
 			${LIB} ${NAME}
 
 clean:
