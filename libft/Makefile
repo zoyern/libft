@@ -6,7 +6,7 @@
 #    By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 10:06:38 by zoyern            #+#    #+#              #
-#    Updated: 2023/11/09 17:40:02 by zoyern           ###   ########.fr        #
+#    Updated: 2023/11/13 22:31:11 by zoyern           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,15 +46,15 @@ FILES		= ft_isalpha.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c\
 			
-BONUSFILES	= ft_lstnew.c\
-			ft_lstadd_front.c\
-			ft_lstsize.c\
-			ft_lstlast.c\
-			ft_lstadd_back.c\
-			ft_lstdelone.c\
-			ft_lstclear.c\
-			ft_lstiter.c\
-			ft_lstmap.c
+BONUSFILES	= ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c\
+			ft_lstadd_back_bonus.c\
+			ft_lstdelone_bonus.c\
+			ft_lstclear_bonus.c\
+			ft_lstiter_bonus.c\
+			ft_lstmap_bonus.c
 
 OBJECTS		= ${FILES:.c=.o}
 BONUSOBJ	= ${BONUSFILES:.c=.o}
