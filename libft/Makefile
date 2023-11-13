@@ -6,7 +6,7 @@
 #    By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 10:06:38 by zoyern            #+#    #+#              #
-#    Updated: 2023/11/13 22:40:55 by zoyern           ###   ########.fr        #
+#    Updated: 2023/11/14 00:46:43 by zoyern           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,10 @@ ${NAME}:	${OBJECTS}
 bonus:		${BONUSOBJ}
 			${AR} ${NAME} ${OBJECTS} ${BONUSOBJ}
 			${LIB} ${NAME}
+
+so:			bonus
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES) $(BONUSFILES)
+			gcc -nostartfiles -shared -o libft.so $(OBJECTS) ${BONUSOBJ}
 
 clean:
 			${RM} ${OBJECTS} ${BONUSOBJ}
