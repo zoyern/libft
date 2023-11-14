@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
+/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 01:42:58 by almounib          #+#    #+#             */
-/*   Updated: 2023/11/04 01:55:32 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/14 18:48:06 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ unsigned long	ft_strlcat(char *dst, const char *src, unsigned long sz)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
+	if (!sz)
+		return (src_len);
 	i = dst_len;
-	if (sz <= dst_len)
+	if (sz <= dst_len || sz < 1)
 		return (src_len + sz);
 	dst += dst_len;
 	while (*src && i++ < sz - 1)

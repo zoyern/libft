@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
+/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:42:59 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/07 22:25:36 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/14 18:05:33 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char	*malloc_str(char const *s, char c, unsigned long *pos)
 		len++;
 	}
 	dup = (char *)malloc(sizeof(char) * (len + 1));
+	if (!dup)
+		return (NULL);
 	*pos -= len;
 	len = 0;
 	while ((s[*pos] != c) && s[*pos] != '\0')

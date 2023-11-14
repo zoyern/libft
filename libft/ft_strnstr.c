@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoyern <zoyern@student.42.fr>              +#+  +:+       +#+        */
+/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:52:21 by zoyern            #+#    #+#             */
-/*   Updated: 2023/11/13 21:25:31 by zoyern           ###   ########.fr       */
+/*   Updated: 2023/11/14 17:59:58 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *s,	const char *needle, unsigned long n)
 	needle_len = ft_strlen(needle);
 	if (!needle_len)
 		return ((char *)s);
-	if (!n || !s)
+	if (!n)
 		return (NULL);
 	while (*s && n-- >= needle_len)
 	{
